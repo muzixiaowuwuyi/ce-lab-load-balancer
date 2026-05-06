@@ -1,0 +1,23 @@
+ALB Listener and Routing Rules Summary
+--------------------------------------
+Load Balancer: web-alb
+VPC: vpc-0c60f1655cb53a5a3
+
+1. Listener Detail:
+   - Protocol: HTTP
+   - Port: 80
+   - Status: Active
+
+2. Default Routing Rule:
+   - Priority: Default
+   - Condition: All traffic (Catch-all)
+   - Action: Forward to 'web-servers-tg'
+   - Weight: 100% (All requests sent to this target group)
+
+3. Target Group Association:
+   - Target Group Name: web-servers-tg
+   - Target Group ARN: arn:aws:elasticloadbalancing:eu-central-1:218852529000:targetgroup/web-servers-tg/...
+   - Target Health: 3/3 Healthy
+
+4. Scalability Logic:
+   - Cross-Zone Load Balancing: Enabled (Distributes traffic evenly across eu-central-1a and eu-central-1b)

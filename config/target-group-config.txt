@@ -1,0 +1,31 @@
+Target Group Configuration Summary
+----------------------------------
+Target Group Name: web-servers-tg
+Target Type: Instances
+Protocol: HTTP
+Port: 80
+VPC ID: vpc-0c60f1655cb53a5a3 (bootcamp-vpc)
+Target Group ARN: arn:aws:elasticloadbalancing:eu-central-1:218852529000:targetgroup/web-servers-tg/4d6799ad28819c7e
+
+Registered Targets:
+------------------
+1. Name: web-server-1a
+   Instance ID: i-023564cfadb3741e5
+   Availability Zone: eu-central-1a
+   Public IP: 3.75.222.42
+
+2. Name: web-server-1a-2
+   Instance ID: i-02546668b6cb8b585
+   Availability Zone: eu-central-1a
+   Public IP: 3.122.247.230
+
+3. Name: web-server-1b
+   Instance ID: i-05c2cb111a136e7cb
+   Availability Zone: eu-central-1b
+   Public IP: 18.196.107.73
+
+Attributes:
+-----------
+- Deregistration delay: 300 seconds (Connection Draining)
+- Stickiness: Disabled
+- Load balancing algorithm: Round Robin

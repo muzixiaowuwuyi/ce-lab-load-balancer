@@ -1,0 +1,26 @@
+Application Load Balancer Configuration Summary
+----------------------------------------------
+Basic Details:
+- Name: web-alb
+- DNS Name: web-alb-26606387.eu-central-1.elb.amazonaws.com
+- Scheme: Internet-facing
+- Type: Application
+- IP Address Type: IPv4
+- Status: Provisioning (Created on May 6, 2026, 10:51 UTC+02:00)
+
+Network Configuration:
+- VPC ID: vpc-0c60f1655cb53a53 (bootcamp-vpc)
+- Availability Zones & Subnets:
+  * eu-central-1b: subnet-0737aef524852bc09 (public-subnet-1b)
+  * eu-central-1a: subnet-0654cc51dc2097f51 (public-subnet-1a)
+
+Listeners and Rules:
+- Listener Protocol:Port: HTTP:80
+- Default Action: Forward to web-servers-tg
+- Target Group Stickiness: Off
+
+Security:
+- Security Group: alb-sg (sg-057dc5458ce503f59)
+
+Resource Identifier:
+- Load Balancer ARN: arn:aws:elasticloadbalancing:eu-central-1:218852529000:loadbalancer/app/web-alb/44cb1c12bec0fffd

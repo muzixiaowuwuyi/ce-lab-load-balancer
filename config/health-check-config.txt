@@ -1,0 +1,22 @@
+Health Check Configuration Summary
+----------------------------------
+Target Group Name: web-servers-tg
+VPC: vpc-0c60f1655cb53a5a3 (bootcamp-vpc)
+
+1. Connectivity Settings:
+   - Protocol: HTTP
+   - Port: 80 (Traffic Port)
+   - Path: /health
+
+2. Thresholds & Timing:
+   - Healthy Threshold: 2 consecutive successes
+   - Unhealthy Threshold: 2 consecutive failures
+   - Timeout: 5 seconds (Time to wait for a response)
+   - Interval: 10 seconds (Time between check attempts)
+   - Success Codes: 200 (Expects "OK" from Node.js server)
+
+3. Logic Overview:
+   - Failure Detection: An instance is marked 'Unhealthy' within ~20 seconds.
+   - Recovery Detection: An instance is marked 'Healthy' within ~20 seconds after service start.
+   - Expected Payload: {"status":"healthy", ...}
+
